@@ -424,6 +424,13 @@ export const WRAPPED_NATIVE_CURRENCY: { [chainId: number]: Token | undefined } =
     'WBNB',
     'Wrapped BNB'
   ),
+  [SupportedChainId.REDBELLY_TESTNET]: new Token(
+    SupportedChainId.REDBELLY_TESTNET,
+    '0xf823329110329F21b1Da6F8B2FaD7D8322EAA4cE',
+    18,
+    'WRBNT',
+    'Wrapped Redbelly Native Token'
+  ),
 }
 
 export function isCelo(chainId: number): chainId is SupportedChainId.CELO | SupportedChainId.CELO_ALFAJORES {

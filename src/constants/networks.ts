@@ -89,6 +89,10 @@ export const FALLBACK_URLS = {
     'https://bsc-dataseed4.defibit.io',
     'https://rpc.ankr.com/bsc',
   ],
+  [SupportedChainId.REDBELLY_TESTNET]: [
+    // "Safe" URLs
+    'https://governors.testnet.redbelly.network',
+  ],
 }
 
 /**
@@ -128,4 +132,5 @@ export const RPC_URLS = {
   [SupportedChainId.CELO]: FALLBACK_URLS[SupportedChainId.CELO],
   [SupportedChainId.CELO_ALFAJORES]: FALLBACK_URLS[SupportedChainId.CELO_ALFAJORES],
   [SupportedChainId.BNB]: [QUICKNODE_RPC_URL, ...FALLBACK_URLS[SupportedChainId.BNB]],
+  [SupportedChainId.REDBELLY_TESTNET]: FALLBACK_URLS[SupportedChainId.REDBELLY_TESTNET],
 }
