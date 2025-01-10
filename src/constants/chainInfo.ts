@@ -11,12 +11,13 @@ import optimismSquareLogoUrl from 'assets/svg/optimism_square_logo.svg'
 import optimismLogoUrl from 'assets/svg/optimistic_ethereum.svg'
 import polygonSquareLogoUrl from 'assets/svg/polygon_square_logo.svg'
 import polygonMaticLogo from 'assets/svg/polygon-matic-logo.svg'
+import rbLogo from 'assets/svg/rb-logo.svg'
 import { SupportedChainId } from 'constants/chains'
 import ms from 'ms.macro'
 import { darkTheme } from 'theme/colors'
 
 import { SupportedL1ChainId, SupportedL2ChainId } from './chains'
-import { ARBITRUM_LIST, CELO_LIST, OPTIMISM_LIST, PLASMA_BNB_LIST } from './lists'
+import { ARBITRUM_LIST, CELO_LIST, OPTIMISM_LIST, PLASMA_BNB_LIST, RB_TESTNET_LIST } from './lists'
 
 export const AVERAGE_L1_BLOCK_TIME = ms`12s`
 
@@ -211,6 +212,22 @@ const CHAIN_INFO: ChainInfoMap = {
     squareLogoUrl: bnbSquareLogoUrl,
     nativeCurrency: { name: 'BNB', symbol: 'BNB', decimals: 18 },
     defaultListUrl: PLASMA_BNB_LIST,
+    color: darkTheme.chain_56,
+    backgroundColor: darkTheme.chain_56_background,
+  },
+  [SupportedChainId.REDBELLY_TESTNET]: {
+    networkType: NetworkType.L1,
+    blockWaitMsBeforeWarning: ms`10m`,
+    bridge: undefined,
+    docs: 'https://vine.redbelly.network/',
+    explorer: 'https://redbelly.testnet.routescan.io/',
+    infoLink: 'https://redbelly.network/',
+    label: 'Redbelly Testnet',
+    logoUrl: rbLogo,
+    circleLogoUrl: rbLogo,
+    squareLogoUrl: rbLogo,
+    nativeCurrency: { name: 'Redbelly Native Token', symbol: 'RBNT', decimals: 18 },
+    defaultListUrl: RB_TESTNET_LIST,
     color: darkTheme.chain_56,
     backgroundColor: darkTheme.chain_56_background,
   },
